@@ -1,9 +1,13 @@
 import express from "express";
-import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
+import dotenv from "dotenv";
 
+//Configuration
+dotenv.config();
 const app = express();
+const PORT = process.env.PORT;
+const mongoDBURL = `mongodb+srv://root:${process.env.MONGODBPW}@bookstore.a8tfoms.mongodb.net/books-collection?retryWrites=true&w=majority&appName=bookstore`;
 
 //Middleware for parsing request body
 app.use(express.json());
