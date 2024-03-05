@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import booksRoute from "./routes/bookRoutes.js";
 import dotenv from "dotenv";
+import cors from "cors";
 
 //Configuration
 dotenv.config();
@@ -11,6 +12,9 @@ const mongoDBURL = `mongodb+srv://root:${process.env.MONGODBPW}@bookstore.a8tfom
 
 //Middleware for parsing request body
 app.use(express.json());
+
+//Middleware for handling CORS Policy
+app.use(cors());
 
 //Route
 app.use("/books", booksRoute);
