@@ -17,5 +17,5 @@ const BackButton = ({ destination = "/" }) => {
 export default BackButton;
 
 BackButton.propTypes = {
-  destination: PropTypes.string.isRequired,
+  destination: PropTypes.string,
 };
