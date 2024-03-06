@@ -41,5 +41,5 @@ const BookCard = ({ books }) => {
 export default BookCard;
 
 BookCard.propTypes = {
-  books: PropTypes.object,
+  books: PropTypes.array,
 };
