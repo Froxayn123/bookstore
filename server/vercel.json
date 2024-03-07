@@ -6,11 +6,11 @@
     },
     {
       "src": "/books/",
-      "dest": "/api/index.js"
+      "dest": "/routes/bookRoutes.js"
     },
     {
       "src": "/books/:id",
-      "dest": "/api/index.js"
+      "dest": "/routes/bookRoutes.js"
     }
   ]
 }
