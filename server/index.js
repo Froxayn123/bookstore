@@ -7,16 +7,14 @@ import cors from "cors";
 //Configuration
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT;
-const mongoDBURL = process.env.MONGODBURL;
 
 //MongoDB Connect
 mongoose
-  .connect(mongoDBURL)
+  .connect(process.env.MONGODBURL)
   .then(() => {
     console.log("App connected to database");
-    app.listen(PORT, () => {
-      console.log(`App is listening to port ${PORT}`);
+    app.listen(process.env.PORT, () => {
+      console.log(`App is listening to port ${process.env.PORT}`);
     });
   })
   .catch((error) => {
