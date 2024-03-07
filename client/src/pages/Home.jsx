@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { MdOutlineAddBox} from "react-icons/md";
+import { MdOutlineAddBox } from "react-icons/md";
 import Spinner from "../components/Spinner";
-import BookCard from "../components/BookCard";
+import BooksCard from "../components/BooksCard";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -31,11 +31,7 @@ const Home = () => {
             <MdOutlineAddBox className="text-sky-800 text-4xl" />
           </Link>
         </div>
-        {loading ? (
-          <Spinner />
-        ) : ( <BookCard books={books}/>
-          
-        )}
+        {loading ? <Spinner /> : <BooksCard books={books} />}
       </div>
       ;
     </>
