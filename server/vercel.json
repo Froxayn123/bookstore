@@ -1,3 +1,16 @@
 {
-  "routes": [{ "src": "/books", "dest": "/api/index.js" }]
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/books/",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/books/:id",
+      "dest": "/api/index.js"
+    }
+  ]
 }
