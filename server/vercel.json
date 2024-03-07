@@ -1,4 +1,4 @@
 {
   "builds": [{ "src": "index.js", "use": "@now/node" }],
-  "routes": [{ "src": "/routes/bookRoutes.js", "dest": "/" }]
+  "routes": [{ "src": "/routes/bookRoutes.js", "dest": "index.js" }]
 }
