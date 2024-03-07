@@ -33,5 +33,3 @@ app.use(cors());
 app.get("/", (req, res) => res.send({ message: "App Listening" }));
 
 app.use("/books", booksRoute);
-
-module.exports = app;
