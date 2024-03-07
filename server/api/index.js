@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import booksRoute from "./routes/bookRoutes.js";
+import booksRoute from "../routes/bookRoutes.js";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -9,15 +9,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 const mongoDBURL = process.env.MONGODBURL;
-
-//Middleware for parsing request body
-app.use(express.json());
-
-//Middleware for handling CORS Policy
-app.use(cors());
-
-//Route
-app.use("/books", booksRoute);
 
 //MongoDB Connect
 mongoose
@@ -31,3 +22,16 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+//Middleware for parsing request body
+app.use(express.json());
+
+//Middleware for handling CORS Policy
+app.use(cors());
+
+//Route
+app.get("/", (req, res) => res.send("App Listening"));
+
+app.use("/books", booksRoute);
+
+module.exports = app;
