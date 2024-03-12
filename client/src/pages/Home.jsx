@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://bookstore-api-server-kappa.vercel.app/api/v1/books")
+      .get("https://bookstore-api-server-mu.vercel.app/api/v1/books")
       .then((res) => {
         setBooks(res.data.data);
         setLoading(false);

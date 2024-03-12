@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://bookstore-api-server-kappa.vercel.app/api/v1/books/${id}`)
+      .get(`https://bookstore-api-server-mu.vercel.app/api/v1/books/${id}`)
       .then((res) => {
         setAuthor(res.data.author);
         setPublishYear(res.data.publishYear);
@@ -39,7 +39,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`https://bookstore-api-server-kappa.vercel.app/api/v1/books/${id}`, data)
+      .put(`https://bookstore-api-server-mu.vercel.app/api/v1/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited Successfully", { variant: "success" });
