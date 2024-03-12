@@ -21,7 +21,7 @@ const CreateBook = () => {
     };
     setLoading(true);
     axios
-      .post("https://bookstore-api-server-mu.vercel.app/api/v1/books", data)
+      .post("https://bookstore-api-server-swart.vercel.app/api/v1/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Created Successfully", { variant: "success" });
