@@ -12,7 +12,7 @@ const BookCard = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div key={book._id} className="w-96 p-4 m-2 flex flex-col space-y-4 border-2 rounded-lg relative hover:shadow-xl transition-all ease-in-out duration-100 border-blue-600">
+    <div key={book._id} className="w-[350px] p-4 m-4 flex flex-col space-y-4 border-2 rounded-lg relative hover:shadow-xl transition-all ease-in-out duration-100 border-blue-600">
       <div className="m-2 flex items-center space-x-8">
         <h4 className="text-gray-500">{book._id}</h4>
         <h2 className="px-4 py-1 font-bold rounded-md absolute end-0 top-0 bg-blue-600 text-white">{book.publishYear}</h2>

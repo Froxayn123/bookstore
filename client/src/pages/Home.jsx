@@ -34,13 +34,13 @@ const Home = () => {
         </Navbar>
       </header>
       <main>
-        <div className="m-20 flex flex-col justify-center items-center space-y-4">
+        <div className="mt-10 flex flex-col justify-center items-center space-y-4">
           <div className="flex justify-center items-center space-x-3">
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+            <input type="text" className="w-48" />
+            <select></select>
+            <select></select>
           </div>
-          {loading ? <Spinner /> : <BooksCard books={books} />};
+          {loading ? <Spinner /> : <BooksCard books={books} />}
         </div>
       </main>
       <footer>
