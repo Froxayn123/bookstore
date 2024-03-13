@@ -29,13 +29,17 @@ const Home = () => {
       <header>
         <Navbar>
           <Link to="/books/create">
-            <MdOutlineAddBox className="text-white text-4xl hover:text-black transition-all ease-in-out delay-100" />
+            <MdOutlineAddBox className="text-white text-4xl hover:text-black transition-all ease-in-out duration-100" />
           </Link>
         </Navbar>
       </header>
       <main>
-        <div>
-          <div></div>
+        <div className="m-20 flex flex-col justify-center items-center space-y-4">
+          <div className="flex justify-center items-center space-x-3">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
           {loading ? <Spinner /> : <BooksCard books={books} />};
         </div>
       </main>
