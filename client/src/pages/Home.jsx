@@ -40,7 +40,7 @@ const Home = () => {
             <select></select>
             <select></select>
           </div>
-          {loading ? <Spinner /> : <BooksCard books={books} />}
+          {loading ? <Spinner /> : <BooksCard books={books}/>}
         </div>
       </main>
       <footer>

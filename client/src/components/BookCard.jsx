@@ -17,7 +17,7 @@ const BookCard = ({ book }) => {
         <h4 className="text-gray-500">{book._id}</h4>
         <h2 className="px-4 py-1 font-bold rounded-md absolute end-0 top-0 bg-blue-600 text-white">{book.publishYear}</h2>
       </div>
-      <div>
+      <div className="flex flex-col space-y-2">
         <div className="flex items-center gap-x-2">
           <PiBookOpenTextLight className="text-2xl text-blue-600" />
           <h2 className="my-1">{book.title}</h2>
