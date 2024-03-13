@@ -33,7 +33,7 @@ const Home = () => {
           </Link>
         </Navbar>
       </header>
-      <main className="h-screen">
+      <main>
         <div className="mt-10 flex flex-col justify-center items-center space-y-4">
           <div className="flex justify-center items-center space-x-3">
             <input type="text" className="w-48" />
