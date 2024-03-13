@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { MdOutlineAddBox } from "react-icons/md";
 import Spinner from "../components/Spinner";
 import BooksCard from "../components/BooksCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -24,16 +26,22 @@ const Home = () => {
   }, []);
   return (
     <>
-      <div className="p-4">
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl my-8">Book List</h1>
+      <header>
+        <Navbar>
           <Link to="/books/create">
-            <MdOutlineAddBox className="text-sky-800 text-4xl" />
+            <MdOutlineAddBox className="text-white text-4xl hover:text-black transition-all ease-in-out delay-100" />
           </Link>
+        </Navbar>
+      </header>
+      <main>
+        <div>
+          <div></div>
+          {loading ? <Spinner /> : <BooksCard books={books} />};
         </div>
-        {loading ? <Spinner /> : <BooksCard books={books} />}
-      </div>
-      ;
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
 import { useSnackbar } from "notistack";
+import Navbar from "../components/Navbar";
 
 const CreateBook = () => {
   const [title, setTitle] = useState("");
@@ -37,6 +38,7 @@ const CreateBook = () => {
   return (
     <>
       <div className="p-4">
+        <Navbar />
         <BackButton />
         <h1 className="text-3xl my-4">Create Book</h1>
         {loading ? <Spinner /> : ""}
