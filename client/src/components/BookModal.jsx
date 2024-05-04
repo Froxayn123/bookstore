@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 
 const BookModal = ({ book, onClose }) => {
   return (
-    <div className="fixed bg-black bg-opacity-60 top-0 left-0 right-0 bottom-0 z-50 flex justify-center items-center" onClick={onClose}>
-      <div onClick={(e) => e.stopPropagation()} className="m-4 w-fit max-w-full bg-white rounded-xl p-4 flex flex-col relative">
+    <div className="fixed -top-20 left-0 right-0 -bottom-20 bg-black bg-opacity-60 z-50 flex justify-center items-center" onClick={onClose}>
+      <div onClick={(e) => e.stopPropagation()} className="m-4 w-fit max-w-full bg-white rounded-xl p-6 flex flex-col relative">
         <AiOutlineClose className="absolute right-6 top-6 text-3xl text-blue-600 cursor-pointer" onClick={onClose} />
         <h2 className="w-fit px-4 py-1 bg-blue-600 text-white rounded-lg">{book.publishYear}</h2>
         <h4 className="my-2 text-gray-500">{book._id}</h4>
