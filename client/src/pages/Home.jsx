@@ -6,6 +6,7 @@ import Spinner from "../components/Spinner";
 import BooksCard from "../components/BooksCard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { FaSearch } from "react-icons/fa";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -35,10 +36,9 @@ const Home = () => {
       </header>
       <main className="min-h-screen">
         <div className="mt-10 flex flex-col justify-center items-center space-y-4">
-          <div className="flex justify-center items-center space-x-3">
-            <input type="text" className="w-48" />
-            <select></select>
-            <select></select>
+          <div className="w-56 relative flex items-center space-x-3 outline outline-2 outline-blue-600">
+            <input type="text" className="p-3 w-48 border-0 focus:outline-none" autoFocus />
+            <FaSearch className="absolute end-3 text-blue-600" />
           </div>
           {loading ? (
             <Spinner />
