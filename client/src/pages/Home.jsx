@@ -37,7 +37,7 @@ const Home = () => {
       <main className="min-h-screen">
         <div className="mt-10 flex flex-col justify-center items-center space-y-4">
           <div className="w-56 relative flex items-center space-x-3 outline outline-2 outline-blue-600">
-            <input type="text" className="p-3 w-48 border-0 focus:outline-none" autoFocus />
+            <input type="text" className="p-3 w-48 border-0 focus:outline-none" onChange={(e) => e.target.value} autoFocus />
             <FaSearch className="absolute end-3 text-blue-600" />
           </div>
           {loading ? (
