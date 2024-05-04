@@ -7,6 +7,9 @@ export default {
         madimiOne: ["'Madimi One'", "sans-serif"],
         breeSerif: ["'Bree Serif'", "serif"],
       },
+      colors:{
+        primary: 'text-blue-600',
+      }
     },
   },
   plugins: [require("@tailwindcss/forms")],

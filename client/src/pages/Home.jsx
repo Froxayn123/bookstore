@@ -33,7 +33,7 @@ const Home = () => {
           </Link>
         </Navbar>
       </header>
-      <main>
+      <main className="min-h-screen">
         <div className="mt-10 flex flex-col justify-center items-center space-y-4">
           <div className="flex justify-center items-center space-x-3">
             <input type="text" className="w-48" />
@@ -45,9 +45,9 @@ const Home = () => {
           ) : (
             <BooksCard books={books}>
               <Link to="/books/create">
-                <div className="w-[350px] p-8 m-4 flex flex-col justify-center items-center space-y-4 border-2 rounded-lg relative hover:shadow-xl transition-all ease-in-out duration-100 border-blue-600">
-                  <MdOutlineAddBox className="text-8xl text-blue-600" />
-                  <h1 className="font-madimiOne text-4xl text-blue-600">Add Book</h1>
+                <div className="w-[350px] p-8 m-4 flex flex-col justify-center items-center space-y-4 border-2 rounded-lg relative hover:shadow-xl transition-all ease-in-out duration-100 border-blue-600 text-blue-600">
+                  <MdOutlineAddBox className="text-8xl " />
+                  <h1 className="font-madimiOne text-4xl ">Add Book</h1>
                 </div>
               </Link>
             </BooksCard>

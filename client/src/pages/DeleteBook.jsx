@@ -2,7 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import BackButton from "../components/BackButton";
-import Spinner from "../components/Spinner";
+import {HiArrowDownCircle} from "react-icons/hi2"
+import Navbar from "../components/Navbar";
 import { useSnackbar } from "notistack";
 
 const DeleteBook = () => {
@@ -30,17 +31,22 @@ const DeleteBook = () => {
 
   return (
     <>
-      <div className="p-4">
-        <BackButton />
-        <h1 className="text-3xl my-4">Delete Book</h1>
-        {loading ? <Spinner /> : ""}
-        <div className="flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto">
-          <h3 className="text-2xl capitalize">Are you sure you want to delete this book?</h3>
-
-          <button className="p-4 bg-red-600 text-white m-8 w-full" onClick={handleDeleteBook}>
+      <div>
+      <Navbar/>
+        <div className="flex flex-col justify-center items-center">
+        <h1 className=" text-3xl my-4">Delete Book</h1>
+        {loading ? <HiArrowDownCircle className="w-12 h-12 animate-bounce text-blue-600"/> : ""}
+        <div className="m-4 flex flex-col border-2 border-blue-600 rounded-xl w-fit p-6 space-y-6">
+          <BackButton/>
+          <div className="flex flex-col justify-center items-center space-y-4">
+          <h3 className="text-xl capitalize">Are you sure you want to delete this book?</h3>
+          <button className="p-4 bg-red-600 text-white w-full" onClick={handleDeleteBook}>
             Yes, Delete it
           </button>
+          </div>
         </div>
+        </div>
+
       </div>
       ;
     </>
